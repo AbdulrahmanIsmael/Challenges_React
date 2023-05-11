@@ -1,0 +1,32 @@
+@import './include/vars';
+
+.navbar {
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  gap: 10px;
+  padding: 5px 10px;
+  img {
+    width: 70px;
+  }
+
+  .nav-links {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    li {
+      .nav-link {
+        transition: 0.1s linear;
+        color: #fff;
+        &:hover {
+          color: $main-green;
+        }
+        &.active {
+          color: $main-green;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

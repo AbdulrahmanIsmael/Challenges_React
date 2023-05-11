@@ -1,0 +1,83 @@
+@import '../styles/include/vars';
+
+.tours {
+  margin: 0 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  place-items: start; // default value for it is stretch, changing it to remove the affect on other items
+  gap: 10px;
+  .tour {
+    background: linear-gradient(to right, #fff, #eee);
+    box-shadow: 0px 0px 5px #555;
+    border-radius: 10px;
+    .tour-img {
+      overflow: hidden;
+      position: relative;
+      img {
+        transition: 0.25s ease-in;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        width: 100%;
+
+        &:hover {
+          transform: scale(2) rotate(10deg);
+        }
+      }
+
+      .close-btn {
+        cursor: pointer;
+        transition: opacity 0.2s ease-in;
+        opacity: 0;
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        font-size: 1.5rem;
+        color: $main-green;
+      }
+
+      &:hover {
+        .close-btn {
+          opacity: 1;
+        }
+      }
+    }
+
+    .tour-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 15px 10px;
+
+      h2 {
+        color: $main-green;
+        font-size: 2.3rem;
+        font-weight: 400;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        font-weight: 300;
+      }
+
+      .show-info {
+        width: fit-content;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        i {
+          font-size: 1.2rem;
+          color: $main-green;
+          margin-left: 5px;
+        }
+      }
+
+      .info {
+        padding-top: 7px;
+        line-height: 30px;
+      }
+    }
+  }
+}

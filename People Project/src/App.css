@@ -1,0 +1,33 @@
+#persons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 30px 0;
+}
+
+.person {
+  background-color: #ddd;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 6rem;
+}
+
+.person > img {
+  width: 70px;
+  border-radius: 50%;
+  border: 3px solid green;
+}
+
+.person > h1 {
+  color: green;
+}
+
+.person > div {
+  color: green;
+}
